@@ -1,0 +1,138 @@
+
+###  激活用户
+GET {{urls}}/sina/create_activate_member?uid=34345&ip=127.0.0.1
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+###设置实名
+GET {{urls}}/sina/set_real_name?uid=34345&ip=127.0.0.1&real_name=张三&cert_no=130522198903271217
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+
+###设置密码
+GET {{urls}}/sina/set_pay_password?uid=34345&ip=127.0.0.1&real_name=张三&cert_no=130522198903271217&return_url=http://www.baidu.com
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+### 2.3	绑定认证信息
+GET {{urls}}/sina/binding_verify?uid=34345&ip=127.0.0.1&real_name=张三&cert_no=130522198903271217&return_url=http://www.baidu.com&phone=18500424185
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+
+### 2.3	查询余额
+GET {{urls}}/sina/query_balance?uid=34345&ip=127.0.0.1&real_name=张三&account_type=SAVING_POT
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+
+### 2.4 create_hosting_collect_trade  托管代收
+#  http://pay-new.tongqianguan.com/paybgNotify/investComplete
+#
+GET {{urls}}/sina/create_hosting_collect_trade?payer_id=34345&out_trade_no=20180526010101909201&out_trade_code=1001&amount=23.59&summary=summary&payer_ip=127.0.0.1&notify_url=http://www.baidu.com&return_url=http://www.baidu.com&trade_related_no=abc1239900
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+### 创建托管代付交易
+
+GET {{urls}}/sina/create_single_hosting_pay_trade?payee_identity_id=34345&out_trade_no=201805260101019090111&out_trade_code=2001&amount=10&summary=summary&user_ip=127.0.0.1&notify_url=http://www.baidu.com&return_url=http://www.baidu.com&trade_related_no=abc1239900
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+### 查询 关联号
+
+GET {{urls}}/sina/query_trade_related_no?trade_related_no=20180710000015
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+### query_hosting_deposit 充值查询
+
+GET {{urls}}/sina/query_hosting_deposit?identity_id=34345&start_time=20180601000000&end_time=20180627000000
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+
+### query_hosting_withdraw 提现
+GET {{urls}}/sina/query_hosting_withdraw?identity_id=34345&out_trade_no=18060610303935675434
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+### query_hosting_withdraw 提现查询
+GET {{urls}}/sina/query_hosting_withdraw?identity_id=34345&out_trade_no=18060610303935675434
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+### 查询标的信息
+GET {{urls}}/sina/query_bid_info?trade_related_no=abc123
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+### 录入标的
+### abc123
+GET {{urls}}/sina/create_bid_info?out_bid_no=abc123&bid_name=ryd&summary=&url=&extend_param=&web_site_name=tqg&bid_type=CREDIT&bid_amount=10000&bid_year_rate=5&bid_duration=120&repay_type=REPAY_CAPITAL_WITH_INTEREST&protocol_type=OTHER&bid_product_type=&recommend_inst=&begin_date=20150401142530&term=20150401142530&borrower_info_list=34453~UID~10000~buyhource~18300000001~01012345678~~10~100~~~~a@126.com~summary~
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+###
+GET {{urls}}/sina/show_member_infos_sina?uid=34345&isBorrow=1
+Accept : application/json
+Content-Type : application/json;charset=UTF-8
+Authorization: {{userID}}
+{
+   "userID": "34345"
+}
+
+###

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--提取系统properties所有属性-->
+    <!--<bean id="sinaPropContainer" class="com.tqg.config.SpringPropertiesContainer"/>-->
+
+    <!--取系统bean工具类-->
+    <!--<bean id="sinaspringContextHolder" class="com.tqg.config.APiSpringContextHolder"/>-->
+
+
+    <!--<bean id="springProp" class="com.tqg.common.context.SpringProperties"/>-->
+</beans>

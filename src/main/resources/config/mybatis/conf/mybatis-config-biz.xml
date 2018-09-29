@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="callSettersOnNulls" value="true"/><!--解决，查询返回结果含null没有对应字段值问题-->
+    </settings>
+    <typeAliases>
+        <typeAlias alias="PageInfo" type="com.tqg.zhao.mybatisPlugin.page.PageInfo"/>
+    </typeAliases>
+
+    <typeHandlers>
+        <!--<typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"></typeHandler>-->
+    </typeHandlers>
+
+    <plugins>
+        <!--分页插件-->
+        <plugin interceptor="com.tqg.zhao.mybatisPlugin.page.PagePlugin">
+            <property name="dialect" value="mysql"/>
+            <property name="pageSqlId" value=".*ListPage.*"/>
+        </plugin>
+        <plugin interceptor="com.tqg.zhao.mybatisPlugin.page.SqlStatementInterceptor"/>
+    </plugins>
+</configuration>
